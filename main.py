@@ -9,20 +9,21 @@ Napisz prostą grę w zgadywanie liczb. Komputer musi wylosować liczbę w zakre
 '''
 
 from random import randint
+
 def los():
-    los = int(randint(1, 100))
+    random_numb = int(randint(1, 100))
     print(los)
     while True:
         try:
-            liczba = input("Chose number: ")
-            liczba = float(liczba)
+            number = input("Chose number: ")
+            number = float(number)
         except:
             print("It's not a number!")
             continue
-        if liczba == los:
+        if number == random_numb:
             return "You win!"
             break
-        elif liczba < los:
+        elif number < random_numb:
             print("To small!")
         else:
             print("To big!")
